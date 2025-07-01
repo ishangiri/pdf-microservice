@@ -6,7 +6,9 @@ import nunjucks from 'nunjucks'
 import {fileURLToPath} from 'url'
 import { dirname, join } from 'path';
 import { executablePath } from 'puppeteer';
+import dotenv from 'dotenv';
 
+dotenv.config();
 
 const app = express();
 const port = 3000
@@ -36,7 +38,7 @@ app.post('/generate-pdf', async(req, res) => {
         })
       const browser = await puppeteer.launch({
       headless: "new",
-      executablePath: executablePath(),
+      executablePath: process.env.NODE_ENV === "production" ? process.env.PUPPETEER_EXECUTABLE_PATH : executablePath(),
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
     });
 
