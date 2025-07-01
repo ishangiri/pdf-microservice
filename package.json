@@ -1,0 +1,22 @@
+{
+  "name": "pdfserver",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js",
+    "dev": "nodemon main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "nunjucks": "^3.2.4",
+    "puppeteer": "^24.11.1"
+  }
+}
