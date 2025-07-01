@@ -10,3 +10,6 @@ mkdir -p $PUPPETEER_CACHE_DIR
 
 # Install Chrome browser explicitly
 npx puppeteer browsers install chrome
+
+# Set environment variables for Puppeteer
+export PUPPETEER_CACHE_DIR=$PUPPETEER_CACHE_DIR
