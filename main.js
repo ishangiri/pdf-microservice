@@ -5,6 +5,7 @@ import cors from 'cors'
 import nunjucks from 'nunjucks'
 import {fileURLToPath} from 'url'
 import { dirname, join } from 'path';
+import { executablePath } from 'puppeteer';
 
 
 const app = express();
@@ -35,6 +36,7 @@ app.post('/generate-pdf', async(req, res) => {
         })
       const browser = await puppeteer.launch({
       headless: "new",
+      executablePath: executablePath(),
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
     });
 

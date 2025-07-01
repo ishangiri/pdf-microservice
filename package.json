@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "main.js",
   "type": "module",
-  "scripts": {
+   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node main.js",
     "dev": "nodemon main.js"
@@ -18,5 +18,8 @@
     "nodemon": "^3.1.10",
     "nunjucks": "^3.2.4",
     "puppeteer": "^24.11.1"
-  }
+  },
+    "puppeteer": {
+  "skipChromiumDownload": false
+}
 }
